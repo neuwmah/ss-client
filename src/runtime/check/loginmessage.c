@@ -3,9 +3,6 @@ void CheckLoginMessage() {
     if (wcscmp(lastChatMessage, L"Help : /h, /help") != 0) return;
     wcscpy(lastChatMessage, L"");
     
-    LogToChat("SS Client by 2014", 0xEB7AEB);
-    LogToChat("Help: !delay", 0xED88ED);
-    LogToChat("Usage: !key value", 0xEF93EF);
-    LogToChat("Discord: discord.gg/mixmaster", 0xF4AEF2);
-    LogToChat("Press DEL key to enable.", 0xF6B9F6);
+    LogToChat("SS Client by 2014", CHAT_COLOR_PURPLE);
+    LogToChat("discord.gg/mixmaster", CHAT_COLOR_PINK);
 }
