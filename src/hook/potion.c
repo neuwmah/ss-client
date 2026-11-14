@@ -5,6 +5,9 @@ void AutoPotionHP(int target, unsigned short currentHP, unsigned short maxHP) {
     if (currentHP == maxHP) return;
 
     for (int i = 0; i < countHotbarHP; i++) {
+        char* pointerStatus = (char*)POINTER_STATUS;
+        if (*pointerStatus == 8) return;
+
         int index = hotbarHP[i];
         
         DWORD indexDelay    = healDelay[index];
@@ -28,6 +31,9 @@ void AutoPotionMP(int target, unsigned short currentMP, unsigned short maxMP) {
     if (currentMP == maxMP) return;
 
     for (int i = 0; i < countHotbarMP; i++) {
+        char* pointerStatus = (char*)POINTER_STATUS;
+        if (*pointerStatus == 8) return;
+
         int index = hotbarMP[i];
         
         DWORD indexDelay    = healDelay[index];
