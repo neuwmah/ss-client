@@ -16,7 +16,9 @@ typedef struct {
     uintptr_t hench_2_hp, hench_2_hp_max, hench_2_mp, hench_2_mp_max, hench_2_flag;
     uintptr_t hench_3_hp, hench_3_hp_max, hench_3_mp, hench_3_mp_max, hench_3_flag;
     uintptr_t base_items_table, base_items_hotbar;
-    uintptr_t chat_base, chat_last_command, chat_last_message, chat_last_color;
+    uintptr_t chat_base, chat_last_command;
+    uintptr_t chat_last_message, chat_last_message_2, chat_last_message_3, chat_last_message_4;
+    uintptr_t chat_last_color;
     uintptr_t pointer_status;
     uintptr_t nop_chat_msg;
 } ServerAddrs;
@@ -53,10 +55,13 @@ extern ServerAddrs ADDR;
 #define BASE_ITEMS_TABLE  (ADDR.base_items_table)
 #define BASE_ITEMS_HOTBAR (ADDR.base_items_hotbar)
 
-#define CHAT_BASE         (ADDR.chat_base)
-#define CHAT_LAST_COMMAND (ADDR.chat_last_command)
-#define CHAT_LAST_MESSAGE (ADDR.chat_last_message)
-#define CHAT_LAST_COLOR   (ADDR.chat_last_color)
+#define CHAT_BASE           (ADDR.chat_base)
+#define CHAT_LAST_COMMAND   (ADDR.chat_last_command)
+#define CHAT_LAST_MESSAGE   (ADDR.chat_last_message)
+#define CHAT_LAST_MESSAGE_2 (ADDR.chat_last_message_2)
+#define CHAT_LAST_MESSAGE_3 (ADDR.chat_last_message_3)
+#define CHAT_LAST_MESSAGE_4 (ADDR.chat_last_message_4)
+#define CHAT_LAST_COLOR     (ADDR.chat_last_color)
 
 #define POINTER_STATUS (ADDR.pointer_status)
 #define NOP_CHAT_MSG   (ADDR.nop_chat_msg)

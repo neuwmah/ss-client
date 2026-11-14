@@ -29,10 +29,13 @@
     .base_items_table  = 0x00E649D8,
     .base_items_hotbar = 0x006DF6C8,
 
-    .chat_base         = 0x005F0DB0,
-    .chat_last_command = 0x02821A50,
-    .chat_last_message = 0x005F6C40,
-    .chat_last_color   = 0x005F7018,
+    .chat_base           = 0x005F0DB0,
+    .chat_last_command   = 0x02821A50,
+    .chat_last_message   = 0x005F6C40,
+    .chat_last_message_2 = 0x005F6ADC,
+    .chat_last_message_3 = 0x005F6978,
+    .chat_last_message_4 = 0x005F6978,
+    .chat_last_color     = 0x005F7018,
 
     .pointer_status = 0x006DF690,
     .nop_chat_msg   = 0x00493B32
