@@ -16,6 +16,7 @@
 #include "runtime/check/chatcommands.c"
 #include "runtime/check/gamewindow.c"
 #include "runtime/check/hackon.c"
+#include "runtime/check/heroon.c"
 
 #include "runtime/command/f1f9.c"
 #include "runtime/command/f10.c"
@@ -26,6 +27,7 @@
 
 DWORD WINAPI by2014(LPVOID lpParam) {
     while (TRUE) {
+        CheckHeroLogin();
         CheckLoginMessage();
         CheckChatCommands();
         CheckGameWindow();

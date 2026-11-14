@@ -8,6 +8,4 @@ void CheckLoginMessage() {
     LogToChat("Usage: !key value", 0xEF93EF);
     LogToChat("Discord: discord.gg/mixmaster", 0xF4AEF2);
     LogToChat("Press DEL key to enable.", 0xF6B9F6);
-    
-    ReadItemsTable();
 }

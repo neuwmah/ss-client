@@ -7,6 +7,7 @@
 #define HERO_HP_MAX 0x00891A6C
 #define HERO_MP     0x00891A6A
 #define HERO_MP_MAX 0x00891A6E
+#define HERO_ON     0x019F72A8
 
 // Hench 1
 #define HENCH_1_HP     0x00896F4C

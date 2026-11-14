@@ -25,3 +25,6 @@ DWORD lastHealTime[10] = {0};
 DWORD currentTime      = 0;
 
 char lastCommand[256];
+
+int connection = 0;
+unsigned char* heroConnected = (unsigned char*)HERO_ON;
