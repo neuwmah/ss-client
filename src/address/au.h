@@ -34,5 +34,6 @@
     .chat_last_message = 0x005F57F0,
     .chat_last_color   = 0x005F5B00,
 
-    .pointer_status = 0x006D8F70
+    .pointer_status = 0x006D8F70,
+    .nop_chat_msg   = 0x00493CF8
 }

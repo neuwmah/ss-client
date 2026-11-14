@@ -18,6 +18,7 @@ typedef struct {
     uintptr_t base_items_table, base_items_hotbar;
     uintptr_t chat_base, chat_last_command, chat_last_message, chat_last_color;
     uintptr_t pointer_status;
+    uintptr_t nop_chat_msg;
 } ServerAddrs;
 
 extern ServerAddrs ADDR;
@@ -58,3 +59,4 @@ extern ServerAddrs ADDR;
 #define CHAT_LAST_COLOR   (ADDR.chat_last_color)
 
 #define POINTER_STATUS (ADDR.pointer_status)
+#define NOP_CHAT_MSG   (ADDR.nop_chat_msg)

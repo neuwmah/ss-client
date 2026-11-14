@@ -17,6 +17,16 @@ static int ServerMarkerSet(uintptr_t marker) {
     return s != NULL && s[0] != '\0';
 }
 
+static void NopHotbarClickLog(void) {
+    DWORD oldProtect;
+    BYTE *p = (BYTE *)NOP_CHAT_MSG;
+    if (!VirtualProtect(p, 33, PAGE_EXECUTE_READWRITE, &oldProtect))
+        return;
+    for (int i = 0; i < 33; i++)
+        p[i] = 0x90;
+    VirtualProtect(p, 33, oldProtect, &oldProtect);
+}
+
 static void ApplyServer(const ServerAddrs *src) {
     ADDR = *src;
 
@@ -28,6 +38,8 @@ static void ApplyServer(const ServerAddrs *src) {
     gameUnits[1] = (struct GameUnit){ 0x38, HENCH_1_HP, HENCH_1_MP, HENCH_1_HP_MAX, HENCH_1_MP_MAX, HENCH_1_FLAG };
     gameUnits[2] = (struct GameUnit){ 0x34, HENCH_2_HP, HENCH_2_MP, HENCH_2_HP_MAX, HENCH_2_MP_MAX, HENCH_2_FLAG };
     gameUnits[3] = (struct GameUnit){ 0x30, HENCH_3_HP, HENCH_3_MP, HENCH_3_HP_MAX, HENCH_3_MP_MAX, HENCH_3_FLAG };
+
+    NopHotbarClickLog();
 }
 
 int DetectServer(void) {
