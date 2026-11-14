@@ -6,20 +6,20 @@ void CheckHack() {
     
     int lowerHPindex     = -1;
     int lowerMPindex     = -1;
-    short lowerHPcurrent =  0;
-    short lowerHPmax     =  0;
-    short lowerMPcurrent =  0;
-    short lowerMPmax     =  0;
+    unsigned short lowerHPcurrent =  0;
+    unsigned short lowerHPmax     =  0;
+    unsigned short lowerMPcurrent =  0;
+    unsigned short lowerMPmax     =  0;
     for (int index = 0; index < 4; index++) {
 
         int isHench       = index > 0;
         int henchEquipped = isHench ? *(uintptr_t*)gameUnits[index].flagAddr : 0;
         if (isHench && !henchEquipped) continue;
 
-        short currentHP = *(short*)gameUnits[index].hpAddr;
-        short maxHP     = *(short*)gameUnits[index].maxHpAddr;
-        short currentMP = *(short*)gameUnits[index].mpAddr;
-        short maxMP     = *(short*)gameUnits[index].maxMpAddr;
+        unsigned short currentHP = *(unsigned short*)gameUnits[index].hpAddr;
+        unsigned short maxHP     = *(unsigned short*)gameUnits[index].maxHpAddr;
+        unsigned short currentMP = *(unsigned short*)gameUnits[index].mpAddr;
+        unsigned short maxMP     = *(unsigned short*)gameUnits[index].maxMpAddr;
         
         if (currentHP == 0) {
             if (index == 0) Setup();

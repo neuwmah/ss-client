@@ -1,5 +1,5 @@
-void AutoPotionHP(int index, short currentHP, short maxHP);
-void AutoPotionMP(int index, short currentMP, short maxMP);
+void AutoPotionHP(int index, unsigned short currentHP, unsigned short maxHP);
+void AutoPotionMP(int index, unsigned short currentMP, unsigned short maxMP);
 void LogToChat(const char* message, int color);
 
 void ReadItemsTable();

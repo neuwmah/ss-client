@@ -1,7 +1,7 @@
 typedef void (__stdcall *callUi)(int arg1, int arg2, int arg3);
 callUi hookGameInterface = (callUi)CALL_GAME_INTERFACE;
 
-void AutoPotionHP(int target, short currentHP, short maxHP) {
+void AutoPotionHP(int target, unsigned short currentHP, unsigned short maxHP) {
     if (currentHP == maxHP) return;
 
     for (int i = 0; i < countHotbarHP; i++) {
@@ -24,7 +24,7 @@ void AutoPotionHP(int target, short currentHP, short maxHP) {
     }
 }
 
-void AutoPotionMP(int target, short currentMP, short maxMP) {
+void AutoPotionMP(int target, unsigned short currentMP, unsigned short maxMP) {
     if (currentMP == maxMP) return;
 
     for (int i = 0; i < countHotbarMP; i++) {
