@@ -1,5 +1,5 @@
 typedef void (__stdcall *callUi)(int arg1, int arg2, int arg3);
-callUi hookGameInterface = (callUi)CALL_GAME_INTERFACE;
+callUi hookGameInterface = NULL;
 
 void AutoPotionHP(int target, unsigned short currentHP, unsigned short maxHP) {
     if (currentHP == maxHP) return;

@@ -11,6 +11,7 @@
 #include "hook/potion.c"
 
 #include "runtime/setup.c"
+#include "runtime/server.c"
 
 #include "runtime/check/loginmessage.c"
 #include "runtime/check/chatcommands.c"
@@ -26,13 +27,15 @@
 #include "runtime/read/itemshotbar.c"
 
 DWORD WINAPI by2014(LPVOID lpParam) {
+    if (!DetectServer())
+        return 1;
     while (TRUE) {
         CheckHeroLogin();
         CheckLoginMessage();
         CheckChatCommands();
         CheckGameWindow();
         CheckHack();
-        Sleep(33); 
+        Sleep(33);
     }
     return 0;
 }

@@ -16,3 +16,4 @@ void CommandF10();
 void CommandDelay();
 
 void Setup();
+int DetectServer(void);
