@@ -8,6 +8,8 @@ void Setup() {
     ReadItemsHotbar();
     if (countHotbarHP == 0 && countHotbarMP == 0) {
         LogToChat("[Auto Potion] Please set potions and try again.", CHAT_COLOR_PINK);
+        hackON = !hackON;
+        LogToChat("2014 OFF", CHAT_COLOR_PURPLE);
         return;
     }
 
