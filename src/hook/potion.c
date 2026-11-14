@@ -19,10 +19,6 @@ void AutoPotionHP(int target, unsigned short currentHP, unsigned short maxHP) {
         hookGameInterface(hotbarKey, 1, 0x201);
         hookGameInterface(gameUnits[target].targetId, 1, 0x202);
 
-        wchar_t* lastChatMessage = (wchar_t*)CHAT_LAST_MESSAGE;
-        swprintf(lastChatMessage, 256, L"~ HP F%d", index + 1);
-        *(DWORD*)CHAT_LAST_COLOR = CHAT_COLOR_PURPLE;
-
         Sleep(33);
     }
 }
@@ -44,10 +40,6 @@ void AutoPotionMP(int target, unsigned short currentMP, unsigned short maxMP) {
         int hotbarKey = 0x1D + index;
         hookGameInterface(hotbarKey, 1, 0x201);
         hookGameInterface(gameUnits[target].targetId, 1, 0x202);
-
-        wchar_t* lastChatMessage = (wchar_t*)CHAT_LAST_MESSAGE;
-        swprintf(lastChatMessage, 256, L"~ MP F%d", index + 1);
-        *(DWORD*)CHAT_LAST_COLOR = CHAT_COLOR_PURPLE;
 
         Sleep(33);
     }
