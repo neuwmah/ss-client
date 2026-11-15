@@ -34,6 +34,9 @@ static void ApplyServer(const ServerAddrs *src) {
     hookChatMessage   = (callChat)CALL_CHAT_MESSAGE;
     heroConnected     = (unsigned char *)HERO_ON;
 
+    if (*heroConnected)
+        heroStartedOn = 1;
+
     gameUnits[0] = (struct GameUnit){ 0x3C, HERO_HP,    HERO_MP,    HERO_HP_MAX,    HERO_MP_MAX, 0 };
     gameUnits[1] = (struct GameUnit){ 0x38, HENCH_1_HP, HENCH_1_MP, HENCH_1_HP_MAX, HENCH_1_MP_MAX, HENCH_1_FLAG };
     gameUnits[2] = (struct GameUnit){ 0x34, HENCH_2_HP, HENCH_2_MP, HENCH_2_HP_MAX, HENCH_2_MP_MAX, HENCH_2_FLAG };

@@ -23,3 +23,4 @@ char lastCommand[256];
 
 int connection = 0;
 unsigned char* heroConnected = NULL;
+int heroStartedOn = 0;

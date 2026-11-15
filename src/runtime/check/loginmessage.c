@@ -13,12 +13,14 @@ void CheckLoginMessage() {
         wcscmp(lastChatMessage1, L"Ajuda : /h, /Ajuda") == 0 ||
         wcscmp(lastChatMessage1, L"Ajuda : /h, /help") == 0 ||
         wcscmp(lastChatMessage2, L"Help : /h, /help") == 0 ||
-        wcscmp(lastChatMessage4, L"Help : /h, /help") == 0
+        wcscmp(lastChatMessage4, L"Help : /h, /help") == 0 ||
+        heroStartedOn == 1
     ) {
         wcscpy(lastChatMessage4, L"");
         wcscpy(lastChatMessage3, L"");
         wcscpy(lastChatMessage2, L"");
         wcscpy(lastChatMessage1, L"");
+        heroStartedOn = 0;
     } else return;
 
     LogToChat("SS Client by 2014", CHAT_COLOR_PURPLE);
