@@ -9,9 +9,11 @@ void CheckLoginMessage();
 void CheckChatCommands();
 void CheckGameWindow();
 void CheckHack();
+void CheckHeroLogin();
 
 void CommandF1F9();
 void CommandF10();
 void CommandDelay();
 
 void Setup();
+int DetectServer(void);
